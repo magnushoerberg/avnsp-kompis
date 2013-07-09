@@ -21,7 +21,8 @@ post '/' do
   email = params[:email]
   name  = params[:name]
   Mail.deliver do
-    to 'magnus.hoerberg@gmail.com'
+    to 'victor.bergelin@gmail.com'
+    cc 'magnus.hoerberg@gmail.com'
     from 'contact@academian.se'
     subject 'Academian Kompis - Kontakt'
     text_part do
