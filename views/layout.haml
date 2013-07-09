@@ -1,0 +1,64 @@
+!!!
+/ /ht Paul Irish - http://front.ie/j5OMXi
+/[if lt IE 7 ] <html class="no-js ie6" lang="en">
+/[if IE 7 ] <html class="no-js ie7" lang="en">
+/[if IE 8 ] <html class="no-js ie8" lang="en">
+/ [if (gte IE 9)|!(IE)]><!
+%html.no-js{:lang => "en"}
+  / <![endif]
+  %head
+    %meta{:charset => "utf-8"}
+    %title Vänner till academian
+    %meta{:content => "", :name => "vänner till academian"}
+    %meta{:content => "", :name => "ansvp"}
+    / /ht Andy Clarke - http://front.ie/lkCwyf
+    %meta{:content => "on", "http-equiv" => "cleartype"}
+    %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
+    %link{:href => "/link/to/favicon.ico", :rel => "shortcut icon"}
+    %link{:href => "/link/to/apple-touch-icon.png", :rel => "apple-touch-icon"}
+    / /ht Jeremy Keith - http://front.ie/mLXiaS
+    %link{:href => "css/example/global.css", :media => "all", :rel => "stylesheet"}
+    %link{:href => "css/example/layout.css", :media => "all and (min-width: 33.236em)", :rel => "stylesheet"}
+    / 30em + (1.618em * 2) = 33.236em / Eliminates potential of horizontal scrolling in most cases
+    /[if (lt IE 9) &amp; (!IEMobile)]
+    <link rel="stylesheet" href="css/example/layout.css" media="all">
+    %script{:src => "js/libs/modernizr-1.7.min.js"}
+  %body
+    #container.cf
+      %article
+        %header
+          %h2
+            %img#header-logo{:alt => "Front", :src => "images/example/header-logo.png"}
+          %h1
+            Vänner till academian
+            %span introduceras till höstfesten 2013
+        #main.cf{:role => "main"}
+          -if msg = flash[:success]
+            .alert.alert-success
+              != msg
+          %p.intro
+            Till hösten erbjuds nya samarbetsmöjligheter vi kallar "Vänner till Academian". Detta är när du deltar med företaget du jobbar på genom att välja en av tre olika paket för 1200, 3000 och 4500 kr. För detta blir hela företaget vän med Academian och gör en stor insats för att göra höstfesten änu bättre.
+          %aside
+            %img{:alt => "", :src => "images/example/bjorn.jpg"}/
+          %p
+            Detta är något som är väldigt uppskattat och vi hoppas att ni tycker det skulle vara kul att vara med!
+
+            Innehållet i nivåerna är inte helt bestämt och vi kommer att jobba med alla fall individuellt. Skulle ni vilja vara med så meddela oss snart. Välj då en nivå som passar just er och så hjälps vi åt att hitta en passande publicitetsmöjlighet.
+
+            Skriv in namn och mailadress nedan om du skulle vilja höra mer om vilka möjligheter som finns.
+          %div
+            != yield
+          %br
+          %br
+          %p
+            Redan nu har vi fått nya Vänner. SATS kommer till exempel att vara med genom Mats Oreberg. Kul tycker vi och hoppas att det är fler som vill vara med till höstfesten. Kom ihåg att ju tidigare man anmäler sig, destu fler möjligheter att samarbeta finns det!
+        %footer
+          %center
+            Vänner till academian:
+            %br
+            %br
+            %img{:alt => "", :src => "images/example/logo-sats.png"}/
+            %br
+            / /main
+        / /container
